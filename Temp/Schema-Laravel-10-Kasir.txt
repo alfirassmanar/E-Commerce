@@ -1,0 +1,51 @@
+- Menggunakan Laravel 10 
+- Xampp Versi 8.2.4-0
+- Database : DBEaver / Localhost
+- Program  : Local
+
+
+STRUKTUR PROGRAM
+
+*MULTI USER*
+- Username & Password : admin@gmail.com   || admin
+- Username & Password : kasir@gmail.com   || kasir
+- Username & Password : firas@gmail.com   || 123
+- Username & Password : baskara@gmail.com || 123
+
+*Views*
+1. ADMIN - Laporan
+	 - Layout (Admin)
+	 - Master - barang	
+		  - diskon
+		  - jenisbarang
+		  - laptransaksi
+		  - user
+   - home.blade.php
+
+2. - AUTH (Login)
+   - login.blade.php
+   - register.blade.php
+
+3. KASIR - basket => user
+	 - layout (Kasir)
+	 - transaksi => user
+   - home.blade.php
+
+4. LAYOUT (untuk All User)
+
+5. - USER - Layout
+   - Home.blade.php
+
+#Controller
+- BarangController		=> CRUD Barang Join to tbljenisbarang 
+- BasketController		=> Tambah Barang User(with array), Hapus Cart 
+- CheckoutController		=> GET Data Tambah Barang, Pesan & Bayar Barang, Hapus All Barang
+- DiskonController		=> GET & Update Diskon
+- HomeController		=> Untuk Redirect Login Multilevel Admin, Kasir, User
+- JBarangController		=> CRUD Jenis Barang
+- LapTransaksiController	=> GET Data Transaksi
+- LoginController		=> Login Proses dengan multilevel, logout, registrasi
+- TransaksiController		=> Get Data Barang Join to Jenis Barang, Create ke Keranjang join tbldiskon, tblbarang, tbljenisbarang, (Level : Kasir) Proses Pembayaran  
+- UserController		=> CRUD Data Profile
+ 
+
